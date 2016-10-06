@@ -96,6 +96,7 @@
 				TargetAttributes = {
 					489EE44B1DA601980051A80C = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = P4EULK4HLY;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -260,6 +261,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = P4EULK4HLY;
 				INFOPLIST_FILE = MiraclePills/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = self.edu.matthew.MiraclePills;
@@ -272,6 +274,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = P4EULK4HLY;
 				INFOPLIST_FILE = MiraclePills/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = self.edu.matthew.MiraclePills;
@@ -299,6 +302,7 @@
 				489EE4601DA601980051A80C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
