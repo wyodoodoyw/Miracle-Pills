@@ -19,6 +19,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var cityTextField: UITextField!
+    @IBOutlet weak var provinceLabel: UILabel!
     @IBOutlet weak var provincePickerButton: UIButton!
     @IBOutlet weak var provincePicker: UIPickerView!
     @IBOutlet weak var countryLabel: UILabel!
@@ -55,6 +56,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         countryTextField.isHidden = true
         postalCodeLabel.isHidden = true
         postalCodeTextField.isHidden = true
+        buyNowButton.isHidden = true
+        
         // show province picker
         provincePicker.isHidden = false
         
@@ -81,6 +84,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         countryTextField.isHidden = false
         postalCodeLabel.isHidden = false
         postalCodeTextField.isHidden = false
+        buyNowButton.isHidden = false
         
         // hide the picker when done
         provincePicker.isHidden = true
@@ -95,29 +99,18 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         nameTextField.isHidden = true
         addressLabel.isHidden = true
         addressTextField.isHidden = true
+        cityLabel.isHidden = true
+        cityTextField.isHidden = true
+        provinceLabel.isHidden = true
+        provincePickerButton.isHidden = true
         countryLabel.isHidden = true
         countryTextField.isHidden = true
         postalCodeLabel.isHidden = true
         postalCodeTextField.isHidden = true
         provincePicker.isHidden = true
+        buyNowButton.isHidden = true
     }
     
-    func showAllItems() {
-        miraclePillEmoji.isHidden = false
-        miraclePillsLabel.isHidden = false
-        priceLabel.isHidden = false
-        divider.isHidden = false
-        nameLabel.isHidden = false
-        nameTextField.isHidden = false
-        addressLabel.isHidden = false
-        addressTextField.isHidden = false
-        countryLabel.isHidden = false
-        countryTextField.isHidden = false
-        postalCodeLabel.isHidden = false
-        postalCodeTextField.isHidden = false
-        provincePicker.isHidden = false
-    }
-
     @IBAction func buyNowButtonPressed(_ sender: AnyObject) {
         hideAllItems()
         successIndicatorImage.isHidden = false

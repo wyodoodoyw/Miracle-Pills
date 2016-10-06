@@ -105,6 +105,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzV-cc-TNA">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="cvR-LR-jL2"/>
+                                    <constraint firstAttribute="width" constant="188" id="pE0-65-I4C"/>
+                                </constraints>
+                                <state key="normal" title="Choose your province..."/>
+                                <connections>
+                                    <action selector="provinceButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pda-ro-QkN"/>
+                                </connections>
+                            </button>
+                            <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mvc-xU-5aS">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="345" id="ARH-YG-j8s"/>
+                                    <constraint firstAttribute="height" constant="216" id="kAz-Fn-y26"/>
+                                </constraints>
+                            </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COUNTRY" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KjM-Sa-31u">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="4el-bf-tzO"/>
@@ -147,22 +163,6 @@
                                     <action selector="buyNowButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BKM-eO-f0a"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzV-cc-TNA">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="cvR-LR-jL2"/>
-                                    <constraint firstAttribute="width" constant="188" id="pE0-65-I4C"/>
-                                </constraints>
-                                <state key="normal" title="Choose your province..."/>
-                                <connections>
-                                    <action selector="provinceButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pda-ro-QkN"/>
-                                </connections>
-                            </button>
-                            <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mvc-xU-5aS">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="345" id="ARH-YG-j8s"/>
-                                    <constraint firstAttribute="height" constant="216" id="kAz-Fn-y26"/>
-                                </constraints>
-                            </pickerView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="successIndicator" translatesAutoresizingMaskIntoConstraints="NO" id="5VY-Cc-FNl"/>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -237,6 +237,7 @@
                         <outlet property="postalCodeLabel" destination="WWV-m5-dW7" id="BjH-dq-aHi"/>
                         <outlet property="postalCodeTextField" destination="nO7-Hb-goe" id="u7I-Yl-D5y"/>
                         <outlet property="priceLabel" destination="Rku-4T-G9M" id="15C-ts-n0n"/>
+                        <outlet property="provinceLabel" destination="guC-YX-V9U" id="lDO-wT-zng"/>
                         <outlet property="provincePicker" destination="Mvc-xU-5aS" id="9RG-zo-edV"/>
                         <outlet property="provincePickerButton" destination="uzV-cc-TNA" id="qBr-cE-zd2"/>
                         <outlet property="successIndicatorImage" destination="5VY-Cc-FNl" id="2sy-s9-c80"/>
