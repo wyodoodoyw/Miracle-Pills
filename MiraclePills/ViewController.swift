@@ -9,13 +9,24 @@
 import UIKit
 
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+    @IBOutlet weak var miraclePillEmoji: UIImageView!
+    @IBOutlet weak var miraclePillsLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var divider: UIView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var addressTextField: UITextField!
+    @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var provincePickerButton: UIButton!
     @IBOutlet weak var provincePicker: UIPickerView!
     @IBOutlet weak var countryLabel: UILabel!
     @IBOutlet weak var countryTextField: UITextField!
     @IBOutlet weak var postalCodeLabel: UILabel!
     @IBOutlet weak var postalCodeTextField: UITextField!
-    
+    @IBOutlet weak var buyNowButton: UIButton!
+    @IBOutlet weak var successIndicatorImage: UIImageView!
     
     var provinces = ["Newfoundland", "PEI", "Nova Scotia", "New Brunswick", "Québec", "Ontario", "Manitoba", "Saskatchewan", "Alberta", "British Columbia", "Yukon", "Northwest Territories", "Nunavut", "钓鱼岛"]
     
@@ -25,6 +36,9 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         
         provincePicker.dataSource = self
         provincePicker.delegate = self
+        
+        // hide success indicator
+        successIndicatorImage.isHidden = true
         
         // sort provinces array alphabetically
         provinces = provinces.sorted()
@@ -71,5 +85,43 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         // hide the picker when done
         provincePicker.isHidden = true
     }
+    
+    func hideAllItems() {
+        miraclePillEmoji.isHidden = true
+        miraclePillsLabel.isHidden = true
+        priceLabel.isHidden = true
+        divider.isHidden = true
+        nameLabel.isHidden = true
+        nameTextField.isHidden = true
+        addressLabel.isHidden = true
+        addressTextField.isHidden = true
+        countryLabel.isHidden = true
+        countryTextField.isHidden = true
+        postalCodeLabel.isHidden = true
+        postalCodeTextField.isHidden = true
+        provincePicker.isHidden = true
+    }
+    
+    func showAllItems() {
+        miraclePillEmoji.isHidden = false
+        miraclePillsLabel.isHidden = false
+        priceLabel.isHidden = false
+        divider.isHidden = false
+        nameLabel.isHidden = false
+        nameTextField.isHidden = false
+        addressLabel.isHidden = false
+        addressTextField.isHidden = false
+        countryLabel.isHidden = false
+        countryTextField.isHidden = false
+        postalCodeLabel.isHidden = false
+        postalCodeTextField.isHidden = false
+        provincePicker.isHidden = false
+    }
+
+    @IBAction func buyNowButtonPressed(_ sender: AnyObject) {
+        hideAllItems()
+        successIndicatorImage.isHidden = false
+    }
+
 }
 
