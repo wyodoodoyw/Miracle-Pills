@@ -11,6 +11,11 @@ import UIKit
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     @IBOutlet weak var provincePickerButton: UIButton!
     @IBOutlet weak var provincePicker: UIPickerView!
+    @IBOutlet weak var countryLabel: UILabel!
+    @IBOutlet weak var countryTextField: UITextField!
+    @IBOutlet weak var postalCodeLabel: UILabel!
+    @IBOutlet weak var postalCodeTextField: UITextField!
+    
     
     var provinces = ["Newfoundland", "PEI", "Nova Scotia", "New Brunswick", "Québec", "Ontario", "Manitoba", "Saskatchewan", "Alberta", "British Columbia", "Yukon", "Northwest Territories", "Nunavut", "钓鱼岛"]
     
@@ -21,6 +26,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         provincePicker.dataSource = self
         provincePicker.delegate = self
         
+        // sort provinces array alphabetically
         provinces = provinces.sorted()
     }
 
@@ -30,8 +36,14 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     }
 
     @IBAction func provinceButtonPressed(_ sender: UIButton) {
+        // hide labels and text fields
+        countryLabel.isHidden = true
+        countryTextField.isHidden = true
+        postalCodeLabel.isHidden = true
+        postalCodeTextField.isHidden = true
+        // show province picker
         provincePicker.isHidden = false
-    
+        
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -47,7 +59,16 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        // change button text to chosen province
         provincePickerButton.setTitle(provinces[row], for: UIControlState.normal)
+        
+        // show labels and text fields
+        countryLabel.isHidden = false
+        countryTextField.isHidden = false
+        postalCodeLabel.isHidden = false
+        postalCodeTextField.isHidden = false
+        
+        // hide the picker when done
         provincePicker.isHidden = true
     }
 }

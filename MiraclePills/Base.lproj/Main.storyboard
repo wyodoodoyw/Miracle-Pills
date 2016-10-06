@@ -155,7 +155,6 @@
                                 </connections>
                             </button>
                             <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mvc-xU-5aS">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="345" id="ARH-YG-j8s"/>
                                     <constraint firstAttribute="height" constant="216" id="kAz-Fn-y26"/>
@@ -217,6 +216,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="countryLabel" destination="KjM-Sa-31u" id="mBR-uV-uZl"/>
+                        <outlet property="countryTextField" destination="LUO-JC-edP" id="2t1-Ql-7bf"/>
+                        <outlet property="postalCodeLabel" destination="WWV-m5-dW7" id="BjH-dq-aHi"/>
+                        <outlet property="postalCodeTextField" destination="nO7-Hb-goe" id="u7I-Yl-D5y"/>
                         <outlet property="provincePicker" destination="Mvc-xU-5aS" id="9RG-zo-edV"/>
                         <outlet property="provincePickerButton" destination="uzV-cc-TNA" id="qBr-cE-zd2"/>
                     </connections>
